@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Online_Chat_Mobile.MainPage"
+             x:Name="mainPageBackground"
+             BackgroundColor="PapayaWhip"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout>
+        <Frame BackgroundColor="PapayaWhip">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Chat Message" FontAttributes="Bold" TextColor="#0e2038" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="End"/>
+            </StackLayout>
+        </Frame>
+        <FlexLayout VerticalOptions="FillAndExpand" Direction="Column" AlignItems="Center" JustifyContent="SpaceAround" Margin="20">
+            <Image Source="illustratorMainPage.png"/>
+            <Label x:Name="lblPhrase" Text="Talk to your loved ones without the possibility of saving your data" TextColor="#0e2038" FontSize="Large" HorizontalTextAlignment="Center"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnCreate" Clicked="btnCreate_Clicked" Text="Create Server" HorizontalOptions="CenterAndExpand" BorderWidth="2" TextColor="#0e2038" BorderColor="#0e2038" 
+                        BackgroundColor="Transparent"/>
+                <Button x:Name="btnJoin" Clicked="btnJoin_Clicked" Text="Join server" BackgroundColor="#0e2038" TextColor="PapayaWhip" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </FlexLayout>
+        <Label x:Name="lblCreator" Text="@kigames" TextColor="#0e2038" FontSize="Small" HorizontalOptions="Center"/>
+    </StackLayout>
+
+</ContentPage>

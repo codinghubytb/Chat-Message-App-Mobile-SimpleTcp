@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Online_Chat_Mobile.View.CreateServerPage"
+             NavigationPage.HasNavigationBar="true"
+             BackgroundColor="PapayaWhip"
+             x:Name="createPageBackground"
+             Title="Create Server">
+
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" VerticalOptions="FillAndExpand" Margin="20">
+            <Frame x:Name="frameBackground"  BorderColor="#0e2038" BackgroundColor="PapayaWhip">
+                <StackLayout>
+                    <Label x:Name="lblTitle" TextColor="#0e2038" Text="To create the server, please enter a port" FontSize="Title" 
+                           HorizontalOptions="Center" HorizontalTextAlignment="Center" />
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Label x:Name="lblIP" Text="IP" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" FontSize="Medium"/>
+                        <Entry Keyboard="Numeric" x:Name="txtIp"  IsReadOnly="True" HorizontalOptions="EndAndExpand" WidthRequest="150"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Label x:Name="lblPORT" Text="PORT" HorizontalOptions="StartAndExpand" VerticalOptions="End" FontSize="Medium"/>
+                        <Entry Keyboard="Numeric" x:Name="txtPort" HorizontalOptions="EndAndExpand" WidthRequest="150"/>
+                    </StackLayout>
+                    <Button x:Name="btnCreate" Text="Create Server" Clicked="btnCreate_Clicked" FontSize="Medium" BorderWidth="2" 
+                            BackgroundColor="Transparent" BorderColor="#0e2038" TextColor="#0e2038"/>
+                </StackLayout>
+            </Frame>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

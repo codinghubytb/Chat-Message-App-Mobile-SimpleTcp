@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Online_Chat_Mobile.View.ChatMessageClient"
+             NavigationPage.HasNavigationBar="True"
+             x:Name="chatClientPageBackground"
+             BackgroundColor="PapayaWhip"
+             NavigationPage.HasBackButton="False"
+             Title="Client">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" Margin="20">
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTitle" Text="" TextColor="#0e2038" FontSize="Large" HorizontalTextAlignment="Center"/>
+                <Button Text="X" FontSize="Medium" Clicked="btnDisconnect_Clicked" BackgroundColor="PapayaWhip" CornerRadius="10" TextColor="Red" BorderColor="Red" BorderWidth="1.5" WidthRequest="50" VerticalOptions="Center" />
+            </StackLayout>
+            <Frame x:Name="frameBackground" VerticalOptions="FillAndExpand" BorderColor="#0e2038" BackgroundColor="PeachPuff">
+                <ScrollView x:Name="ScrollViewElement">
+                    <StackLayout x:Name="SctacklayoutMessage">
+
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Entry x:Name="txtSendMessage" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="btnSend" Text="Send" Clicked="btnSend_Clicked" BorderWidth="2" 
+                        TextColor="#0e2038" BorderColor="#0e2038" BackgroundColor="Transparent"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

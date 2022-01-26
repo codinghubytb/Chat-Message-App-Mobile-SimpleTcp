@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Online_Chat_Mobile.View.JoinServerPage"
+             NavigationPage.HasNavigationBar="True"
+             x:Name="joinServerPageBackground"
+             BackgroundColor="PapayaWhip"
+             Title="Join Server">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" VerticalOptions="FillAndExpand">
+            <Frame Margin="20" x:Name="frameBackground" BackgroundColor="Transparent" BorderColor="#0e2038">
+                <StackLayout>
+                    <Label x:Name="lblTitle" TextColor="#0e2038" Text="To join the server, please enter the ip and the port of the server" FontSize="Title"  
+                           HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Label x:Name="lblIP" Text="IP server" VerticalOptions="End" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                        <Entry x:Name="txtIP" VerticalOptions="EndAndExpand" WidthRequest="100"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="10">
+                        <Label x:Name="lblPORT" Text="PORT server" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand" FontSize="Medium"/>
+                        <Entry x:Name="txtPort" VerticalOptions="EndAndExpand" WidthRequest="100"/>
+                    </StackLayout>
+                    <Button x:Name="btnJoin" Clicked="btnJoin_Clicked" BackgroundColor="#0e2038" FontSize="Medium" TextColor="PapayaWhip"
+                            Text="Join server"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout>
+               
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
